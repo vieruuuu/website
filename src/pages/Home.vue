@@ -23,10 +23,10 @@
         class="q-gutter-sm q-pa-md"
         :class="{ 'animated fadeIn': showScroll, invisible: !showScroll }"
       >
-        <q-btn to="/about" outline flat dense no-caps>about</q-btn>
-        <q-btn to="/services" outline flat dense no-caps>services</q-btn>
-        <q-btn to="/projects" outline flat dense no-caps>projects</q-btn>
-        <q-btn to="/contact" outline flat dense no-caps>contact</q-btn>
+        <ResponsiveBtn to="/about">about</ResponsiveBtn>
+        <ResponsiveBtn to="/services">services</ResponsiveBtn>
+        <ResponsiveBtn to="/projects">projects</ResponsiveBtn>
+        <ResponsiveBtn to="/contact">contact</ResponsiveBtn>
       </div>
     </div>
   </div>
@@ -34,6 +34,7 @@
 
 <script>
 import { defineComponent } from "vue";
+import ResponsiveBtn from "./../components/ResponsiveBtn";
 
 export default defineComponent({
   data() {
@@ -44,6 +45,7 @@ export default defineComponent({
       showScroll: false,
     };
   },
+  components: { ResponsiveBtn },
   methods: {
     changeText() {
       if (this.index + 1 >= this.textArray.length) {

@@ -26,7 +26,8 @@
         <div class="absolute-bottom">
           <q-separator />
 
-          <q-card-actions vertical>
+          <q-card-actions>
+            <q-btn class="text-primary" flat no-caps>more</q-btn>
             <q-btn
               type="a"
               target="_blank"
@@ -34,7 +35,7 @@
               :href="repo.html_url"
               flat
               no-caps
-              >view repo</q-btn
+              >view</q-btn
             >
           </q-card-actions>
         </div>

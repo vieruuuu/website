@@ -1,15 +1,21 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header v-if="$route.path !== '/'" reveal class="bg-dark text-primary">
+    <q-header v-if="$route.path !== '/'" reveal class="bg-dark">
       <q-toolbar>
         <q-toolbar-title />
-        <div class="q-gutter-sm">
-          <q-btn to="/" outline flat dense no-caps>home</q-btn>
-          <q-btn to="/about" outline flat dense no-caps>about</q-btn>
-          <q-btn to="/services" flat dense no-caps>services</q-btn>
-          <q-btn to="/projects" flat dense no-caps>projects</q-btn>
-          <q-btn to="/contact" flat dense no-caps>contact</q-btn>
-        </div>
+        <q-tabs
+          class="text-grey"
+          indicator-color="transparent"
+          active-color="primary"
+          shrink
+          no-caps
+        >
+          <q-route-tab :ripple="false" label="home" to="/" />
+          <q-route-tab :ripple="false" label="about" to="/about" />
+          <q-route-tab :ripple="false" label="services" to="/services" exact />
+          <q-route-tab :ripple="false" label="projects" to="/projects" exact />
+          <q-route-tab :ripple="false" label="contact" to="/contact" exact />
+        </q-tabs>
       </q-toolbar>
     </q-header>
 
@@ -32,6 +38,9 @@ import { defineComponent, ref } from "vue";
 
 export default defineComponent({
   name: "MainLayout",
+  data() {
+    return { tab: "" };
+  },
 
   setup() {},
 });
