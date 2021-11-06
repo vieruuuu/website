@@ -4,6 +4,11 @@
 
     <br />
 
+    fa sa apara o lista cu un fel de statistica nebuna 5 proiecte in js si asa
+    mai departe
+
+    <br />
+
     <div class="flex flex-center q-gutter-md row">
       <q-card
         v-for="repo in repos"

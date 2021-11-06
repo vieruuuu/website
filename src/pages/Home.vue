@@ -23,10 +23,44 @@
         class="q-gutter-sm q-pa-md"
         :class="{ 'animated fadeIn': showScroll, invisible: !showScroll }"
       >
+        <!-- Navigation -->
         <ResponsiveBtn to="/about">about</ResponsiveBtn>
         <ResponsiveBtn to="/services">services</ResponsiveBtn>
         <ResponsiveBtn to="/projects">projects</ResponsiveBtn>
-        <ResponsiveBtn to="/contact">contact</ResponsiveBtn>
+
+        <br />
+
+        <!-- Social -->
+        <ResponsiveBtn
+          type="a"
+          target="_blank"
+          href="https://discordapp.com/users/335430693305843722"
+          ><img
+            class="grayscale"
+            style="width: 25px; height: 25px"
+            src="./../assets/discord.svg"
+            alt="Discord profile"
+        /></ResponsiveBtn>
+        <ResponsiveBtn
+          type="a"
+          target="_blank"
+          href="https://www.linkedin.com/in/andrei-vieru-97930b17b/"
+          ><img
+            class="grayscale"
+            style="width: 30px; height: 30px"
+            src="./../assets/linkedin.svg"
+            alt="LinkedIn profile"
+        /></ResponsiveBtn>
+        <ResponsiveBtn
+          type="a"
+          target="_blank"
+          href="https://github.com/vieruuuu"
+          ><img
+            class="grayscale"
+            style="width: 30px; height: 30px"
+            src="./../assets/github.svg"
+            alt="Github profile"
+        /></ResponsiveBtn>
       </div>
     </div>
   </div>
@@ -57,3 +91,10 @@ setInterval(changeText, 2000);
 
 setTimeout(() => (showScroll.value = true), 1000);
 </script>
+
+<style scoped>
+.grayscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+</style>
