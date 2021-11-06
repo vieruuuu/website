@@ -1,5 +1,9 @@
 <template>
   <div class="text-primary text-center">
-    <p class="text-h2">About</p>
+    <ResponsiveHeader>About</ResponsiveHeader>
   </div>
 </template>
+
+<script setup>
+import ResponsiveHeader from "./../components/ResponsiveHeader.vue";
+</script>

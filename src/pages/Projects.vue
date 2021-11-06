@@ -1,6 +1,8 @@
 <template>
   <div class="text-primary text-center">
-    <p class="text-h2">Projects</p>
+    <ResponsiveHeader>Projects</ResponsiveHeader>
+
+    <br />
 
     <div class="flex flex-center q-gutter-md row">
       <q-card
@@ -15,6 +17,8 @@
           <div class="text-primary text-body1 text-weight-bold">
             {{ repo.name }}
           </div>
+
+          <div class="text-grey">lang: {{ repo.language }}</div>
         </q-card-section>
 
         <q-card-section
@@ -45,6 +49,7 @@
 
 <script setup>
 import { ref } from "vue";
+import ResponsiveHeader from "./../components/ResponsiveHeader.vue";
 
 let repos = ref([]);
 
