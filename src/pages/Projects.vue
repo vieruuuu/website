@@ -20,9 +20,8 @@
         <q-card-section
           v-if="repo.description != null"
           class="text-body1 q-pt-none"
+          >{{ repo.description }}</q-card-section
         >
-          {{ repo.description }}
-        </q-card-section>
         <div class="absolute-bottom">
           <q-separator />
 
@@ -44,27 +43,19 @@
   </div>
 </template>
 
-<script>
-import { defineComponent } from "vue";
+<script setup>
+import { ref } from "vue";
 
-export default defineComponent({
-  data() {
-    return {
-      repos: [],
-    };
-  },
-  methods: {
-    async getRepos() {
-      const res = await fetch("https://api.github.com/users/vieruuuu/repos");
-      const data = await res.json();
-      console.log(data);
-      this.repos = data;
-    },
-  },
-  created() {
-    this.getRepos();
-  },
-});
+let repos = ref([]);
+
+async function getRepos() {
+  const res = await fetch("https://api.github.com/users/vieruuuu/repos");
+  const data = await res.json();
+  console.log(data);
+  repos.value = data;
+}
+
+getRepos();
 </script>
 
 <style scoped>

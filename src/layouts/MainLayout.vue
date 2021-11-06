@@ -21,6 +21,15 @@
 
     <q-page-container>
       <q-page class="bg-dark">
+        <!-- <router-view v-slot="{ Component }">
+          <transition
+            mode="out-in"
+            enter-active-class="animated slideInDown"
+            leave-active-class="animated slideOutDown"
+          >
+            <component :is="Component" />
+          </transition>
+        </router-view>-->
         <transition
           mode="out-in"
           enter-active-class="animated slideInDown"
@@ -32,16 +41,3 @@
     </q-page-container>
   </q-layout>
 </template>
-
-<script>
-import { defineComponent, ref } from "vue";
-
-export default defineComponent({
-  name: "MainLayout",
-  data() {
-    return { tab: "" };
-  },
-
-  setup() {},
-});
-</script>

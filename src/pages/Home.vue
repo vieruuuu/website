@@ -32,36 +32,28 @@
   </div>
 </template>
 
-<script>
-import { defineComponent } from "vue";
-import ResponsiveBtn from "./../components/ResponsiveBtn";
+<script setup>
+import { ref } from "vue";
+import ResponsiveBtn from "./../components/ResponsiveBtn.vue";
 
-export default defineComponent({
-  data() {
-    return {
-      text: "Javascript",
-      textArray: ["Javascript", "VueJS", "NodeJS", "Puppeteer", "Nim"],
-      index: 0,
-      showScroll: false,
-    };
-  },
-  components: { ResponsiveBtn },
-  methods: {
-    changeText() {
-      if (this.index + 1 >= this.textArray.length) {
-        this.index = -1;
-      }
+let text = ref("Javascript");
+let textArray = ["NodeJS", "VueJS", "ElectronJS", "Puppeteer", "Nim"];
+let index = 0;
+let showScroll = ref(false);
 
-      this.text = this.textArray[++this.index];
-    },
-    scrollToBottom() {
-      window.scrollTo(0, window.innerHeight);
-    },
-  },
-  mounted() {
-    setInterval(this.changeText, 2000);
+function changeText() {
+  if (index + 1 >= textArray.length) {
+    index = -1;
+  }
 
-    setTimeout(() => (this.showScroll = true), 1000);
-  },
-});
+  text.value = textArray[++index];
+}
+
+function scrollToBottom() {
+  window.scrollTo(0, window.innerHeight);
+}
+
+setInterval(changeText, 2000);
+
+setTimeout(() => (showScroll.value = true), 1000);
 </script>
