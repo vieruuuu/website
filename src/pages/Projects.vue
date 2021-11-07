@@ -85,6 +85,13 @@
 
 <script setup>
 import { ref } from "vue";
+import {
+  QCard,
+  QCardActions,
+  QSeparator,
+  QCardSection,
+  QSpinner,
+} from "quasar";
 import ResponsiveHeader from "./../components/ResponsiveHeader.vue";
 
 let repos = ref([]);

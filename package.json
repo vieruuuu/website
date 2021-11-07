@@ -15,9 +15,7 @@
     "@quasar/extras": "^1.11.4",
     "autoprefixer": "^10.4.0",
     "core-js": "^3.6.5",
-    "quasar": "^2.3.0",
-    "vue-typed-js": "^0.1.2",
-    "vue-typer": "^1.2.0"
+    "quasar": "^2.3.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.13.14",

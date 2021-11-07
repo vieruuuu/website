@@ -52,7 +52,7 @@ module.exports = configure(function (ctx) {
       // analyze: true,
 
       // Options below are automatically set depending on the env, set them if you want to override
-      // extractCSS: false,
+      extractCSS: true,
 
       // https://v2.quasar.dev/quasar-cli/handling-webpack
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain
@@ -60,6 +60,28 @@ module.exports = configure(function (ctx) {
         chain
           .plugin("eslint-webpack-plugin")
           .use(ESLintPlugin, [{ extensions: ["js", "vue"] }]);
+      },
+
+      // mergi ma ca daca andrei e suparat nu mi da bissimo
+      // disable quasar auto import
+      extendWebpack(cfg, { isServer, isClient }) {
+        if (isClient) {
+          // delete the auto import loader
+          for (const rule of cfg.module.rules) {
+            if (!rule.use) {
+              continue;
+            }
+
+            if (
+              rule.use.length &&
+              (rule.use[0].loader.endsWith("transform-quasar-imports.js") ||
+                rule.use[0].loader.endsWith("auto-import-quasar.js"))
+            ) {
+              rule.use.splice(0, 1);
+              break;
+            }
+          }
+        }
       },
     },
 
@@ -79,12 +101,21 @@ module.exports = configure(function (ctx) {
       // iconSet: 'material-icons', // Quasar icon set
       // lang: 'en-US', // Quasar language pack
 
-      // For special cases outside of where the auto-import stategy can have an impact
-      // (like functional components as one of the examples),
-      // you can manually specify Quasar components/directives to be available everywhere:
-      //
-      // components: [],
-      // directives: [],
+      // actually disabled in extendWebpack
+      importStrategy: "auto",
+      components: [
+        "QBtn",
+        "QToolbarTitle",
+        "QRouteTab",
+        "QTabs",
+        "QToolbar",
+        "QHeader",
+        "QScrollArea",
+        "QPage",
+        "QPageContainer",
+        "QLayout",
+      ],
+      directives: [],
 
       // Quasar plugins
       plugins: [],

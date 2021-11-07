@@ -22,5 +22,6 @@
 </template>
 
 <script setup>
+import { QImg } from "quasar";
 import ResponsiveHeader from "./../components/ResponsiveHeader.vue";
 </script>
