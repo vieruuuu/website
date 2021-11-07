@@ -30,7 +30,10 @@
 
       <br />
 
-      <div class="flex flex-center q-gutter-md row">
+      <div
+        :class="{ 'q-pa-xl': $q.screen.gt.md }"
+        class="flex flex-center q-gutter-md row"
+      >
         <q-card
           v-for="repo in repos"
           :key="repo.key"

@@ -20,24 +20,17 @@
 
     <q-page-container>
       <q-page class="bg-dark">
-        <!-- <router-view v-slot="{ Component }">
-          <transition
-            mode="out-in"
-            enter-active-class="animated slideInDown"
-            leave-active-class="animated slideOutDown"
-          >
-            <component :is="Component" />
-          </transition>
-        </router-view>-->
-        <transition
-          mode="out-in"
-          enter-active-class="animated slideInDown"
-          leave-active-class="animated slideOutDown"
-        >
-          <q-scroll-area style="height: 94vh">
-            <router-view />
-          </q-scroll-area>
-        </transition>
+        <q-scroll-area style="height: 94vh">
+          <router-view v-slot="{ Component }">
+            <transition
+              mode="out-in"
+              enter-active-class="animated slideInDown"
+              leave-active-class="animated slideOutDown"
+            >
+              <component :is="Component" />
+            </transition>
+          </router-view>
+        </q-scroll-area>
       </q-page>
     </q-page-container>
   </q-layout>
