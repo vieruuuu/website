@@ -10,37 +10,35 @@
           enter-active-class="animated slideInDown"
           leave-active-class="animated slideOutDown"
         >
-          <!-- Wrapping only one DOM element, defined by QBtn -->
           <p :class="$q.screen.lt.md ? 'text-h6' : 'text-h5'" :key="text">
             {{ text }}
           </p>
         </transition>
       </div>
+
       <br />
       <br />
-      <br />
+
+      <p class="text-italic text-h6">
+        Student at Gheorghe Asachi​ Technical University of Iași
+      </p>
+
       <div
         class="q-gutter-sm q-pa-md"
         :class="{ 'animated fadeIn': showScroll, invisible: !showScroll }"
       >
         <!-- Navigation -->
-        <ResponsiveBtn to="/about">about</ResponsiveBtn>
-        <ResponsiveBtn to="/services">services</ResponsiveBtn>
-        <ResponsiveBtn to="/projects">projects</ResponsiveBtn>
+        <ResponsiveBtn style="width: 115px" to="/about">about</ResponsiveBtn>
+        <ResponsiveBtn style="width: 115px" to="/services"
+          >services</ResponsiveBtn
+        >
+        <ResponsiveBtn style="width: 115px" to="/projects"
+          >projects</ResponsiveBtn
+        >
 
         <br />
 
         <!-- Social -->
-        <ResponsiveBtn
-          type="a"
-          target="_blank"
-          href="https://discordapp.com/users/335430693305843722"
-          ><img
-            class="grayscale"
-            style="width: 25px; height: 25px"
-            src="./../assets/discord.svg"
-            alt="Discord profile"
-        /></ResponsiveBtn>
         <ResponsiveBtn
           type="a"
           target="_blank"
@@ -50,6 +48,16 @@
             style="width: 30px; height: 30px"
             src="./../assets/linkedin.svg"
             alt="LinkedIn profile"
+        /></ResponsiveBtn>
+        <ResponsiveBtn
+          type="a"
+          target="_blank"
+          href="https://discordapp.com/users/335430693305843722"
+          ><img
+            class="grayscale"
+            style="width: 26px; height: 26px"
+            src="./../assets/discord.svg"
+            alt="Discord profile"
         /></ResponsiveBtn>
         <ResponsiveBtn
           type="a"
@@ -70,7 +78,7 @@
 import { ref } from "vue";
 import ResponsiveBtn from "./../components/ResponsiveBtn.vue";
 
-let text = ref("Javascript");
+let text = ref("NodeJS");
 let textArray = ["NodeJS", "VueJS", "ElectronJS", "Puppeteer", "Nim"];
 let index = 0;
 let showScroll = ref(false);

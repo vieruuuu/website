@@ -34,7 +34,9 @@
           enter-active-class="animated slideInDown"
           leave-active-class="animated slideOutDown"
         >
-          <router-view />
+          <q-scroll-area style="height: 94vh">
+            <router-view />
+          </q-scroll-area>
         </transition>
       </q-page>
     </q-page-container>
