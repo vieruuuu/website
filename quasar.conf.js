@@ -128,7 +128,7 @@ module.exports = configure(function (ctx) {
     },
 
     // animations: 'all', // --- includes all animations
-    // https://v2.quasar.dev/options/animations
-    animations: ["slideInDown", "slideOutDown", "fadeIn"],
+    // https://v2.quasar.dev/options/animations,
+    animations: ["slideInDown", "slideOutDown"],
   };
 });

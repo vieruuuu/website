@@ -76,6 +76,7 @@
 
 <script setup>
 import { ref, inject } from "vue";
+import "@quasar/extras/animate/fadeIn.css";
 import ResponsiveBtn from "./../components/ResponsiveBtn.vue";
 
 const appHeight = inject("appHeight");
