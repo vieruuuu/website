@@ -1,6 +1,6 @@
 # Vieru Andrei (website)
 
-Here is the source code for my portfolio website.
+This the source code for my portfolio website.
 
 ## Install the dependencies
 
