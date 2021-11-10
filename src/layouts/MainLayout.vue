@@ -35,20 +35,3 @@
     </q-page-container>
   </q-layout>
 </template>
-
-<script setup>
-import { ref } from "vue";
-
-import {
-  QBtn,
-  QToolbarTitle,
-  QRouteTab,
-  QTabs,
-  QToolbar,
-  QHeader,
-  QScrollArea,
-  QPage,
-  QPageContainer,
-  QLayout,
-} from "quasar";
-</script>
