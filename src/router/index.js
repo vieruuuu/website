@@ -1,4 +1,4 @@
-import { Loading } from "quasar";
+import { LoadingBar } from "quasar";
 import { route } from "quasar/wrappers";
 import {
   createRouter,
@@ -28,11 +28,11 @@ export default route(function (/* { store, ssrContext } */) {
   });
 
   Router.beforeEach((to, from, next) => {
-    Loading.show();
+    LoadingBar.start();
     next();
   });
   Router.afterEach(() => {
-    Loading.hide();
+    LoadingBar.stop();
   });
 
   return Router;

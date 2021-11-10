@@ -1,5 +1,5 @@
 <template>
-  <div style="height: 94vh" class="flex flex-center">
+  <div :style="{ height: appHeight }" class="flex flex-center">
     <div class="text-primary text-center">
       <p :class="$q.screen.lt.md ? 'text-h5' : 'text-h3'">Hi, I'm</p>
       <p :class="$q.screen.lt.md ? 'text-h4' : 'text-h2'">Vieru Andrei</p>
@@ -75,8 +75,10 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, inject } from "vue";
 import ResponsiveBtn from "./../components/ResponsiveBtn.vue";
+
+const appHeight = inject("appHeight");
 
 let text = ref("NodeJS");
 let textArray = ["NodeJS", "VueJS", "ElectronJS", "Puppeteer", "Nim"];

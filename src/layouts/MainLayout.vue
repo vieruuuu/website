@@ -20,7 +20,7 @@
 
     <q-page-container>
       <q-page class="bg-dark">
-        <q-scroll-area style="height: 94vh">
+        <q-scroll-area :style="{ height: appHeight }">
           <router-view v-slot="{ Component }">
             <transition
               mode="out-in"
@@ -35,3 +35,9 @@
     </q-page-container>
   </q-layout>
 </template>
+
+<script setup>
+import { inject } from "vue";
+
+const appHeight = inject("appHeight");
+</script>
