@@ -1,7 +1,9 @@
+import Layout from "layouts/MainLayout.vue";
+
 const routes = [
   {
     path: "/",
-    component: () => import("layouts/MainLayout.vue"),
+    component: Layout,
     children: [
       { path: "", component: () => import("pages/Home.vue") },
       { path: "/about", component: () => import("pages/About.vue") },
