@@ -13,7 +13,7 @@
     <div v-if="!loaded">
       <br /><br /><br />
 
-      <p class="text-h6">loading content</p>
+      <p class="text-h6">fetching content from github</p>
       <br />
       <q-spinner color="primary" size="3em" :thickness="2" />
     </div>
@@ -40,7 +40,7 @@
           flat
           bordered
           class="text-white"
-          :class="$q.screen.lt.md ? 'project-mini' : 'project'"
+          style="width: 300px"
         >
           <q-card-section>
             <div class="text-primary text-body1 text-weight-bold">
@@ -124,12 +124,3 @@ async function getRepos() {
 
 getRepos();
 </script>
-
-<style scoped>
-.project {
-  width: 300px;
-}
-.project-mini {
-  width: 300px;
-}
-</style>

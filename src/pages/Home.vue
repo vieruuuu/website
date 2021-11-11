@@ -29,9 +29,6 @@
       >
         <!-- Navigation -->
         <ResponsiveBtn style="width: 115px" to="/about">about</ResponsiveBtn>
-        <ResponsiveBtn style="width: 115px" to="/services"
-          >services</ResponsiveBtn
-        >
         <ResponsiveBtn style="width: 115px" to="/projects"
           >projects</ResponsiveBtn
         >

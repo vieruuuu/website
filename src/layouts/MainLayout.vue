@@ -12,7 +12,6 @@
         >
           <q-route-tab :ripple="false" label="home" to="/" />
           <q-route-tab :ripple="false" label="about" to="/about" />
-          <q-route-tab :ripple="false" label="services" to="/services" exact />
           <q-route-tab :ripple="false" label="projects" to="/projects" exact />
         </q-tabs>
       </q-toolbar>
