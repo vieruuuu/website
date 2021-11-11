@@ -1,19 +1,18 @@
 <template>
-  <div
-    class="fullscreen bg-blue text-white text-center q-pa-md flex flex-center"
-  >
+  <div class="fullscreen text-white text-center q-pa-md flex flex-center">
     <div>
-      <div style="font-size: 30vh">404</div>
-
-      <div class="text-h2" style="opacity: 0.4">Oops. Nothing here...</div>
+      <h2>404</h2>
+      <h3>page not found :(</h3>
+      <p class="text-body1">
+        page you're trying to access doesn't exist or was deleted
+      </p>
 
       <q-btn
         class="q-mt-xl"
-        color="white"
-        text-color="blue"
+        text-color="primary"
         unelevated
         to="/"
-        label="Go Home"
+        label="home"
         no-caps
       />
     </div>

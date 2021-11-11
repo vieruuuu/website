@@ -28,8 +28,8 @@
         :class="{ 'animated fadeIn': showScroll, invisible: !showScroll }"
       >
         <!-- Navigation -->
-        <ResponsiveBtn style="width: 115px" to="/about">about</ResponsiveBtn>
-        <ResponsiveBtn style="width: 115px" to="/projects"
+        <ResponsiveBtn style="width: 110px" to="/about">about</ResponsiveBtn>
+        <ResponsiveBtn style="width: 110px" to="/projects"
           >projects</ResponsiveBtn
         >
 
